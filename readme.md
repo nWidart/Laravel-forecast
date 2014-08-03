@@ -17,6 +17,29 @@ Add the following in you [composer](http://getcomposer.org).json file:
 }
 ```
 
+Add the service provider in `app/config/app.php`
+
+```php
+'providers' => [
+	...
+	'Nwidart\LaravelForecast\LaravelForecastServiceProvider'
+]
+
+
+```
+
+
+Add the Alias provider in `app/config/app.php`
+
+```php
+'aliases' => [
+
+	'Forecast'          => 'Nwidart\LaravelForecast\ForecastFacade',
+]
+
+```
+
+
 **Publish the configuration file and add your [forecast API key](https://developer.forecast.io/)**
 
 ```
