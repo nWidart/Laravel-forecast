@@ -1,3 +1,6 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast/?branch=master)
+
+
 # Laravel-Forecast
 
 Laravel-forecast provides a service provider and a facade arround the [Forecast-php](https://github.com/guhelski/forecast-php) wrapper.
