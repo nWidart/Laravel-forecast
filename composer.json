@@ -1,6 +1,8 @@
 {
     "name": "nwidart/laravel-forecast",
-    "description": "",
+    "description": "Laravel-forecast provides a service provider and a facade around the Forecast-php wrapper",
+    "keywords": ["forecast", "weather", "laravel"],
+    "licence": "MIT",
     "authors": [
         {
             "name": "Nicolas Widart",
