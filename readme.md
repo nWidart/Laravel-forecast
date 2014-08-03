@@ -12,7 +12,7 @@ Add the following in you [composer](http://getcomposer.org).json file:
 ```json
 {
     "require": {
-        "widart/laravel-forecast": "~1.1"
+        "nwidart/laravel-forecast": "~1.1"
     }
 }
 ```
