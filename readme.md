@@ -33,7 +33,7 @@ Add the Alias provider in `app/config/app.php`
 
 ```php
 'aliases' => [
-
+	...
 	'Forecast'          => 'Nwidart\LaravelForecast\ForecastFacade',
 ]
 
