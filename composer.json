@@ -1,0 +1,21 @@
+{
+    "name": "nwidart/laravel-forecast",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "guhelski/forecast-php": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Nwidart\\LaravelForecast": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
