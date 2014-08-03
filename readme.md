@@ -1,4 +1,4 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast/?branch=master)[![Latest Stable Version](https://poser.pugx.org/nwidart/laravel-forecast/v/stable.svg)](https://packagist.org/packages/nwidart/laravel-forecast) [![Total Downloads](https://poser.pugx.org/nwidart/laravel-forecast/downloads.svg)](https://packagist.org/packages/nwidart/laravel-forecast) [![Latest Unstable Version](https://poser.pugx.org/nwidart/laravel-forecast/v/unstable.svg)](https://packagist.org/packages/nwidart/laravel-forecast) [![License](https://poser.pugx.org/nwidart/laravel-forecast/license.svg)](https://packagist.org/packages/nwidart/laravel-forecast)
 
 
 # Laravel-Forecast
