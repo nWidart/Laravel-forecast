@@ -52,7 +52,7 @@ $ php artisan config:publish nwidart/laravel-forecast
 
 ```php
 
-<?php 
+<?php
 
 Forecast::get('37.8267','-122.423');
 
@@ -65,7 +65,7 @@ Forecast::get('37.8267','-122.423');
 
 ```php
 
-<?php 
+<?php
 
 // Get the forecast at a given time
 dd(Forecast::get(('37.8267','-122.423', '2013-05-06T12:00:00-0400'));
@@ -85,6 +85,25 @@ dd(Forecast::get((
 
 ```
 
+You can also inject the `Forecast\Forecast` class into your contructror.
+
+``` php
+
+ /**
+ * @var \Forecast\Forecast
+ */
+private $forecast;
+
+public function __construct(\Forecast\Forecast $forecast)
+{
+    $this->forecast = $forecast;
+}
+
+public function doSomething()
+{
+    $weather = $this->forecast->get($lat, $lon);
+}
+```
 
 ## License (MIT)
 
