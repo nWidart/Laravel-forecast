@@ -7,12 +7,18 @@ Laravel-forecast provides a service provider and a facade arround the [Forecast-
 
 ## Installation
 
+``` bash
+$ composer require nwidart/laravel-forecast
+```
+
+Or:
+
 Add the following in you [composer](http://getcomposer.org).json file:
 
 ```json
 {
     "require": {
-        "nwidart/laravel-forecast": "~1.1"
+        "nwidart/laravel-forecast": "~1.2"
     }
 }
 ```
