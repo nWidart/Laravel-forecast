@@ -22,9 +22,9 @@ class LaravelForecastServiceProvider extends ServiceProvider
     {
         $this->package('nwidart/laravel-forecast');
 
-        $this->app['forecast'] = $this->app->share(function($app) {
-                return new Forecast($app['config']->get('laravel-forecast::API_KEY'));
-            });
+        $this->app->bindShared('Forecast\Forecast', function ($app) {
+            return new Forecast($app['config']->get('laravel-forecast::API_KEY'));
+        });
     }
 
     /**
