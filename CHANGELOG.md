@@ -3,8 +3,11 @@ All notable changes to this project will be documented in this file.
 
 ## [2.0](https://github.com/nWidart/Laravel-forecast/releases/tag/2.0) - 2015-08-01
 
+### Changed 
+
 - Added Laravel 5.1 support
 - Minimum PHP version : 5.5
+- Autoloading with PSR-4
 
 ## [1.2](https://github.com/nWidart/Laravel-forecast/releases/tag/1.2) - 2015-03-26
 
