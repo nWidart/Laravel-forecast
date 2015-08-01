@@ -20,11 +20,22 @@ class LaravelForecastServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->package('nwidart/laravel-forecast');
+        $this->registerConfiguration();
 
-        $this->app->bindShared('Forecast\Forecast', function ($app) {
-            return new Forecast($app['config']->get('laravel-forecast::API_KEY'));
+        $this->app->singleton(\Forecast\Forecast::class, function ($app) {
+            return new Forecast($app['config']->get('laravel-forecast.API_KEY'));
         });
+    }
+
+    /**
+     * Register the configuration file so Laravel can publish them
+     * Also merges the published config file with original
+     */
+    private function registerConfiguration()
+    {
+        $configPath = __DIR__ . '/../config/laravel-forecast.php';
+        $this->mergeConfigFrom($configPath, 'laravel-forecast');
+        $this->publishes([$configPath => config_path('laravel-forecast.php')]);
     }
 
     /**
