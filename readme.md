@@ -1,5 +1,16 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast/?branch=master)[![Latest Stable Version](https://poser.pugx.org/nwidart/laravel-forecast/v/stable.svg)](https://packagist.org/packages/nwidart/laravel-forecast) [![Total Downloads](https://poser.pugx.org/nwidart/laravel-forecast/downloads.svg)](https://packagist.org/packages/nwidart/laravel-forecast) [![Latest Unstable Version](https://poser.pugx.org/nwidart/laravel-forecast/v/unstable.svg)](https://packagist.org/packages/nwidart/laravel-forecast) [![License](https://poser.pugx.org/nwidart/laravel-forecast/license.svg)](https://packagist.org/packages/nwidart/laravel-forecast)
+[![Latest Version](https://img.shields.io/github/release/nWidart/Laravel-forecast.svg?style=flat-square)](https://github.com/nWidart/Laravel-forecast/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/f554481b-7cd2-4239-a07b-da975dc27688.svg)](https://insight.sensiolabs.com/projects/f554481b-7cd2-4239-a07b-da975dc27688)
+[![Quality Score](https://img.shields.io/scrutinizer/g/nWidart/Laravel-forecast.svg?style=flat-square)](https://scrutinizer-ci.com/g/nWidart/Laravel-forecast)
+[![Total Downloads](https://img.shields.io/packagist/dt/nwidart/laravel-forecast.svg?style=flat-square)](https://packagist.org/packages/nwidart/laravel-forecast)
 
+
+**Laravel 5 compatible package**
+
+| Laravel version  | Package version |
+| ---------------- | --------------- |
+| ~4.2  | ~1.2  |
+| ~5.1  | ~2.0   |
 
 # Laravel-Forecast
 
@@ -11,27 +22,13 @@ Laravel-forecast provides a service provider and a facade arround the [Forecast-
 $ composer require nwidart/laravel-forecast
 ```
 
-Or:
-
-Add the following in you [composer](http://getcomposer.org).json file:
-
-```json
-{
-    "require": {
-        "nwidart/laravel-forecast": "~1.2"
-    }
-}
-```
-
 Add the service provider in `app/config/app.php`
 
 ```php
 'providers' => [
 	...
-	'Nwidart\LaravelForecast\LaravelForecastServiceProvider'
+	Nwidart\LaravelForecast\LaravelForecastServiceProvider::class
 ]
-
-
 ```
 
 
@@ -40,16 +37,15 @@ Add the Alias provider in `app/config/app.php`
 ```php
 'aliases' => [
 	...
-	'Forecast'          => 'Nwidart\LaravelForecast\ForecastFacade',
+	'Forecast' => Nwidart\LaravelForecast\ForecastFacade::class,
 ]
-
 ```
 
 
 **Publish the configuration file and add your [forecast API key](https://developer.forecast.io/)**
 
 ```
-$ php artisan config:publish nwidart/laravel-forecast
+$ php artisan vendor:publish --provider="Nwidart\LaravelForecast\LaravelForecastServiceProvider"
 ```
 
 ## Usage
@@ -57,17 +53,12 @@ $ php artisan config:publish nwidart/laravel-forecast
 ### Base usage
 
 ```php
-
 <?php
 
 Forecast::get('37.8267','-122.423');
-
-
 ```
 
 ### Provide more options
-
-
 
 ```php
 
@@ -111,12 +102,5 @@ public function doSomething()
 }
 ```
 
-## License (MIT)
+## [License (MIT)](LICENSE.md)
 
-Copyright (c) 2013-2015 [Nicolas Widart](http://www.nicolaswidart.com) , n.widart@gmail.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
