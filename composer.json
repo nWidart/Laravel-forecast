@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Nwidart\\LaravelForecast": "src/"
+            "Nwidart\\LaravelForecast\\": "src/"
         }
     },
     "minimum-stability": "stable"
