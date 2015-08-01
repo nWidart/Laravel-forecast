@@ -4,5 +4,8 @@ use Illuminate\Support\Facades\Facade;
 
 class ForecastFacade extends Facade
 {
-    protected static function getFacadeAccessor() { return 'Forecast\Forecast'; }
+    protected static function getFacadeAccessor()
+    {
+        return 'Forecast\Forecast';
+    }
 }

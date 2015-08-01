@@ -47,5 +47,4 @@ class LaravelForecastServiceProvider extends ServiceProvider
     {
         return ['forecast'];
     }
-
 }
