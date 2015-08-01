@@ -1,7 +1,6 @@
 <?php namespace Nwidart\LaravelForecast;
 
 use Forecast\Forecast;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelForecastServiceProvider extends ServiceProvider
