@@ -6,6 +6,6 @@ class ForecastFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'Forecast\Forecast';
+        return 'Nwidart\ForecastPhp\Forecast';
     }
 }
