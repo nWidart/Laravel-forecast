@@ -1,7 +1,7 @@
 <?php namespace Nwidart\LaravelForecast;
 
-use Forecast\Forecast;
 use Illuminate\Support\ServiceProvider;
+use Nwidart\ForecastPhp\Forecast;
 
 class LaravelForecastServiceProvider extends ServiceProvider
 {
@@ -21,8 +21,14 @@ class LaravelForecastServiceProvider extends ServiceProvider
     {
         $this->registerConfiguration();
 
-        $this->app->singleton(\Forecast\Forecast::class, function ($app) {
-            return new Forecast($app['config']->get('laravel-forecast.API_KEY'));
+        $this->app->singleton(Forecast::class, function () {
+            $forecast = new Forecast(config('laravel-forecast.API_KEY'));
+
+            if (! empty(config('laravel-forecast.options'))) {
+                $forecast->setOptions(config('laravel-forecast.options'));
+            }
+
+            return $forecast;
         });
     }
 
