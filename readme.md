@@ -59,13 +59,6 @@ $ php artisan vendor:publish --provider="Nwidart\LaravelForecast\LaravelForecast
 <?php
 
 Forecast::get('37.8267','-122.423');
-```
-
-### Provide more options
-
-```php
-
-<?php
 
 // Get the forecast at a given time
 Forecast::get(('37.8267','-122.423', '2013-05-06T12:00:00-0400')
@@ -82,6 +75,8 @@ In the settings you can add global options that will have used on every request 
     'units' => 'si',
 ],
 ```
+
+For more details and all available options check the [official documentation](https://developer.forecast.io/docs/v2).
 
 ### Alternative method: dependency injection
 
