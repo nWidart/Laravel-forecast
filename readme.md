@@ -68,33 +68,33 @@ Forecast::get('37.8267','-122.423');
 <?php
 
 // Get the forecast at a given time
-dd(Forecast::get(('37.8267','-122.423', '2013-05-06T12:00:00-0400'));
-
-// Use some optional query parameters
-dd(Forecast::get((
-    '37.8267',
-    '-122.423',
-    null,
-    array(
-        'units' => 'si',
-        'exclude' => 'flags'
-        )
-    )
-);
-
-
+Forecast::get(('37.8267','-122.423', '2013-05-06T12:00:00-0400')
 ```
 
-You can also inject the `Forecast\Forecast` class into your contructror.
+### Setting global options for every request
+
+In the settings you can add global options that will have used on every request made to Forecast.io. You can add this in the `options` key of the settings file.
+ 
+ For instance if you want temperature in Celsius:
+ 
+ ``` php
+'options' => [
+    'units' => 'si',
+],
+```
+
+### Alternative method: dependency injection
+
+You can also inject the `Nwidart\ForecastPhp\Forecast` class into your constructor.
 
 ``` php
 
  /**
- * @var \Forecast\Forecast
+ * @var \Nwidart\ForecastPhp\Forecast
  */
 private $forecast;
 
-public function __construct(\Forecast\Forecast $forecast)
+public function __construct(\Nwidart\ForecastPhp\Forecast $forecast)
 {
     $this->forecast = $forecast;
 }
