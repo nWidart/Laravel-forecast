@@ -12,6 +12,8 @@
 | ~4.2  | ~1.2  |
 | ~5.1  | ~2.0   |
 
+Want to use this as a standalone package ? Checkout the [Forecast-php](https://github.com/nWidart/forecast-php) API wrapper.
+
 # Laravel-Forecast
 
 Laravel-forecast provides a service provider and a facade arround the [Forecast-php](https://github.com/guhelski/forecast-php) wrapper.
