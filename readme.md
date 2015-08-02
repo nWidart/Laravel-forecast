@@ -14,7 +14,7 @@
 
 # Laravel-Forecast
 
-Laravel-forecast provides a service provider and a facade around the [Forecast-php]((https://github.com/nWidart/forecast-php) wrapper.
+Laravel-forecast provides a service provider and a facade around the [Forecast-php](https://github.com/nWidart/forecast-php) wrapper.
 
 Want to use this as a standalone package ? Checkout the [Forecast-php](https://github.com/nWidart/forecast-php) API wrapper.
 
